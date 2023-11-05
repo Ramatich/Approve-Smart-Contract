@@ -35,7 +35,7 @@ export const marketplaceNote = "tutorial-marketplace:uv1"
 // Maximum local storage allocation, immutable
 
 export const numLocalInts = 0;
-
+export const ALGORAND_DECIMALS = 6;
 export const numLocalBytes = 0;
 
 // Maximum global storage allocation, immutable
