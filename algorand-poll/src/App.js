@@ -8,9 +8,9 @@ import Wallet from "./components/Wallet";
 
 import {Container, Nav} from "react-bootstrap";
 
-// import Products from "./components/marketplace/Products";
+import Products from "./components/marketplace/Products";
 
-// import {Notification} from "./components/utils/Notifications";
+import {Notification} from "./components/utils/Notifications";
 
 import {indexerClient, myAlgoConnect} from "./utils/constants";
 
@@ -88,7 +88,7 @@ const App = function AppWrapper() {
 
         <>
 
-            {/* <Notification /> */}
+            {<Notification /> }
 
             {address ? (
 
@@ -118,7 +118,7 @@ const App = function AppWrapper() {
 
                     <main>
 
-                        {/* <Products address={address} fetchBalance={fetchBalance}/> */}
+                        {<Products address={address} fetchBalance={fetchBalance}/> }
 
                     </main>
 
