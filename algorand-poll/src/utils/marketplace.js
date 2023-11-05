@@ -28,7 +28,9 @@ import approvalProgram from "!!raw-loader!../contracts/marketplace_approval.teal
 
 import clearProgram from "!!raw-loader!../contracts/marketplace_clear.teal";
 
-import {base64ToUTF8String, utf8ToBase64String} from "./conversions";
+/* eslint-disable import/no-unresolved */
+import { base64ToUTF8String, utf8ToBase64String } from './conversions';
+
 
 global.Buffer = global.Buffer || require('buffer').Buffer
 
@@ -52,9 +54,9 @@ class Product {
         this.owner = owner;
 
     }
-    
 
 }
+
 // Compile smart contract in .teal format to program
 
 const compileProgram = async (programSource) => {
@@ -178,9 +180,8 @@ export const createProductAction = async (senderAddress, product) => {
     return appId;
 
 }
-//...
 
-// BUY PRODUCT: Group transaction consisting of ApplicationCallTxn and PaymentTxn
+//BUY PRODUCT: Group transaction consisting of ApplicationCallTxn and PaymentTxn
 
 export const buyProductAction = async (senderAddress, product, count) => {
 
@@ -265,7 +266,6 @@ export const buyProductAction = async (senderAddress, product, count) => {
 
 }
 
-
 // DELETE PRODUCT: ApplicationDeleteTxn
 
 export const deleteProductAction = async (senderAddress, index) => {
@@ -322,6 +322,7 @@ export const deleteProductAction = async (senderAddress, index) => {
     console.log("Deleted app-id: ", appId);
 
 }
+
 //...
 
 // GET PRODUCTS: Use indexer
